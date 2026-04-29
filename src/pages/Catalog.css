@@ -1,0 +1,33 @@
+.catalog-page {
+  animation: fadeIn 0.4s ease;
+}
+
+.catalog-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.catalog-filter-chip {
+  padding: 8px 18px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.catalog-filter-chip:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
+
+.catalog-filter-chip.active {
+  border-color: var(--accent-red);
+  background: var(--accent-red-light);
+  color: var(--accent-red-hover);
+}
