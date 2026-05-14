@@ -1,0 +1,109 @@
+.register-flow {
+  width: 100%;
+}
+
+.register-error-message {
+  color: var(--accent-red-hover);
+  font-size: 0.8rem;
+  margin-top: -4px;
+}
+
+.register-preferences-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.35s ease;
+}
+
+.register-preferences-head h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.register-preferences-head p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.register-preferences-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.register-preferences-title {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.register-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.register-choice-grid-gender {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.register-choice-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 8px;
+  background: var(--bg-input);
+  border: 1.5px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  text-align: center;
+  cursor: pointer;
+}
+
+.register-choice-card input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.register-choice-card:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
+
+.register-choice-card.active {
+  border-color: var(--accent-red);
+  color: var(--accent-red-hover);
+  background: var(--accent-red-light);
+  box-shadow: 0 0 0 2px var(--accent-red-glow);
+}
+
+.register-preferences-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.register-preferences-actions .btn-outline,
+.register-preferences-actions .btn-primary {
+  flex: 1;
+  padding: 13px 16px;
+}
+
+@media (max-width: 420px) {
+  .register-choice-grid-gender {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .register-preferences-actions {
+    flex-direction: column;
+  }
+}
